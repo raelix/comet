@@ -12,7 +12,7 @@ from RTN import RTN, BestRanking, SettingsModel
 class AppSettings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
-    ADDON_ID: Optional[str] = "stremio.comet.fast"
+    ADDON_ID: Optional[str] = "stremio.comethf.fast"
     ADDON_NAME: Optional[str] = "Comet HF"
     FASTAPI_HOST: Optional[str] = "0.0.0.0"
     FASTAPI_PORT: Optional[int] = 8000
