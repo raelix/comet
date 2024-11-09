@@ -118,6 +118,6 @@ database_url = (
     if settings.DATABASE_TYPE == "sqlite"
     else settings.DATABASE_URL
 )
-database = Database(
-    f"{'sqlite' if settings.DATABASE_TYPE == 'sqlite' else 'postgresql+asyncpg'}://{'/' if settings.DATABASE_TYPE == 'sqlite' else ''}{database_url}"
-)
+database = Database("file::memory:?cache=shared")
+#    f"{'sqlite' if settings.DATABASE_TYPE == 'sqlite' else 'postgresql+asyncpg'}://{'/' if settings.DATABASE_TYPE == 'sqlite' else ''}{database_url}"
+#)
