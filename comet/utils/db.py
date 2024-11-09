@@ -6,11 +6,11 @@ from comet.utils.models import database, settings
 
 async def setup_database():
     try:
-        if settings.DATABASE_TYPE == "sqlite":
-            os.makedirs(os.path.dirname(settings.DATABASE_PATH), exist_ok=True)
+        # if settings.DATABASE_TYPE == "sqlite":
+        #     os.makedirs(os.path.dirname(settings.DATABASE_PATH), exist_ok=True)
 
-            if not os.path.exists(settings.DATABASE_PATH):
-                open(settings.DATABASE_PATH, "a").close()
+        #     if not os.path.exists(settings.DATABASE_PATH):
+        #         open(settings.DATABASE_PATH, "a").close()
 
         await database.connect()
         await database.execute(
