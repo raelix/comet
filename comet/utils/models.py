@@ -13,7 +13,7 @@ class AppSettings(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", env_file_encoding="utf-8")
 
     ADDON_ID: Optional[str] = "stremio.comet.fast"
-    ADDON_NAME: Optional[str] = "Comet"
+    ADDON_NAME: Optional[str] = "Comet HF"
     FASTAPI_HOST: Optional[str] = "0.0.0.0"
     FASTAPI_PORT: Optional[int] = 8000
     FASTAPI_WORKERS: Optional[int] = 2 * (os.cpu_count() or 1)
